@@ -27,7 +27,7 @@ function init(resultFromServer) {
     totalResults.innerHTML = resultFromServer.totalResults + " search results";
     articles = resultFromServer.articles;
     for (var i = 0; i < articles.length; i++) {
-        resultsInfo += "<h1 class='title'>" + "<a href='" + articles[i].url + "'>" + articles[i].title + "</a>" + "</h1>" + "<span class='sourceName'>" + articles[i].source.name + "</span>" + "<span class='author'>" + articles[i].author + "</span>" + "<span class='publishedAt'>" + articles[i].publishedAt + "</span>"
+        resultsInfo += "<div class='resultsContent'>" + "<h1 class='title'>" + "<a href='" + articles[i].url + "'>" + articles[i].title + "</a>" + "</h1>" + "<span class='sourceName'>" + articles[i].source.name + "</span>" + "<span class='author'>" + articles[i].author + "</span>" + "<span class='publishedAt'>" + articles[i].publishedAt + "</span>" + "<img class='urlImage' src='" + articles[i].urlToImage + "'>" + "</div>"
     }
     document.getElementById("resultsInfo").innerHTML = resultsInfo;
 }
